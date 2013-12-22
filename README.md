@@ -56,9 +56,9 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 ## Implement your part of the code
 
-1.  If you look closely at the test failures, you will see that the problem is that `edu.uab.cis.agents.blackjack.DealerAgent.act` is throwing a `java.lang.UnsupportedOperationException`.
+1. If you look closely at the test failures, you will see that the problem is that `edu.uab.cis.agents.blackjack.DealerAgent.act` is throwing a `java.lang.UnsupportedOperationException`.
 
-2.  Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. Your agent should implement the following rules:
+2. Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. Your agent should implement the following rules:
 
    * If the total points represented by the cards are 17 or more, it should return `Action.STAND`. Otherwise, it should return `Action.HIT`.
    * The numeric cards count for the equivalent number of points (TWO=2, THREE=3, ..., TEN=10).
