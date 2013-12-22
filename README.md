@@ -60,10 +60,10 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 2.  Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. Your agent should implement the following rules:
 
-    * If the total points represented by the cards are 17 or more, it should return `Action.STAND`. Otherwise, it should return `Action.HIT`.
-    * The numeric cards count for the equivalent number of points (TWO=2, THREE=3, ..., TEN=10).
-    * JACK, QUEEN and KING count for 10 points.
-    * ACE counts for 11 points unless that would put the total points over 21. In that case, ACE counts for 1 point. (Note that if you have more than one ACE, they can count for different points, e.g. one can count as 11 and one can count as 1.)  
+  * If the total points represented by the cards are 17 or more, it should return `Action.STAND`. Otherwise, it should return `Action.HIT`.
+  * The numeric cards count for the equivalent number of points (TWO=2, THREE=3, ..., TEN=10).
+  * JACK, QUEEN and KING count for 10 points.
+  * ACE counts for 11 points unless that would put the total points over 21. In that case, ACE counts for 1 point. (Note that if you have more than one ACE, they can count for different points, e.g. one can count as 11 and one can count as 1.)  
 
 ## Test your code
 
