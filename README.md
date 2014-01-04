@@ -14,7 +14,7 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 ## Get a copy of the assignment template
 
-1. Fork the repository for the current assignment, https://git.cis.uab.edu/cs-460/git-and-maven, by following the link, typing in your CIS credentials, and clicking on the "Fork" button on the right hand side of the "CS 460 / Git and Maven" page.
+1. Fork the repository for the current assignment, https://git.cis.uab.edu/cs-460/agents-blackjack, by following the link, typing in your CIS credentials, and clicking on the "Fork" button on the right hand side of the "CS 460 / Git and Maven" page.
 
 2. Give your instructor and the grader access to your fork. **We cannot grade your assignment unless you complete this step.** Click on `Settings`, then `Members`, then `New Project Member`. In the `People` box, search for and add the users ``bethard`` and ``suraj``. Under ``Project Access``, select ``Reporter``. Then click ``Add users``.
 
@@ -93,7 +93,7 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
         git push
 
-4.  Verify that your changes have been pushed. Go to `https://git.cis.uab.edu/.../git-and-maven`, where `...` is your CIS username. You should see your newest commit displayed near the top of the page.
+4.  Verify that your changes have been pushed. Go to `https://git.cis.uab.edu/.../agents-blackjack`, where `...` is your CIS username. You should see your newest commit displayed near the top of the page.
 
 5. You should repeat this process regularly while you edit your code to make sure that your in-progress work is always backed up.
 
