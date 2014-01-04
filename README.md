@@ -14,9 +14,9 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 ## Get a copy of the assignment template
 
-1. Fork the repository for the current assignment, https://git.cis.uab.edu/cs-460/agents-blackjack, by following the link, typing in your CIS credentials, and clicking on the "Fork" button on the right hand side of the "CS 460 / Git and Maven" page.
+1. Fork the repository for the current assignment, https://git.cis.uab.edu/cs-460/agents-blackjack, by following the link, typing in your CIS credentials, and clicking on the "Fork" button on the right hand side of the "CS 460 / Agents - Blackjack" page.
 
-2. Give your instructor and the grader access to your fork. **We cannot grade your assignment unless you complete this step.** Click on `Settings`, then `Members`, then `New Project Member`. In the `People` box, search for and add the users ``bethard`` and ``suraj``. Under ``Project Access``, select ``Reporter``. Then click ``Add users``.
+2. Give your instructor and the grader access to your fork. **We cannot grade your assignment unless you complete this step.** Click on `Settings`, then `Members`, then `New Project Member`. In the `People` box, search for and add the user ``bethard``. Under ``Project Access``, select ``Reporter``. Then click ``Add users``.
 
 3. You've successfully forked the repository and granted us access, but so far your repository only exists on `git.cis.uab.edu`. To be able to work on the project, you will need to clone it to your local machine. Click on the HTTPS button and observe the URL in the box that looks like `https://git.cis.uab.edu/.../agents-blackjack.git`. Run the following command, replacing `<url>` with the URL from the box:
 
