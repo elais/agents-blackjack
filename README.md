@@ -16,9 +16,9 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 1. Fork the repository for the current assignment, https://git.cis.uab.edu/cs-460/agents-blackjack, by following the link, typing in your CIS credentials, and clicking on the "Fork" button on the right hand side of the "CS 460 / Agents - Blackjack" page.
 
-2. Give your instructor and the grader access to your fork. **We cannot grade your assignment unless you complete this step.** Click on `Settings`, then `Members`, then `New Project Member`. In the `People` box, search for and add the user ``bethard``. Under ``Project Access``, select ``Reporter``. Then click ``Add users``.
+2. Give your instructor access to your fork. **I cannot grade your assignment unless you complete this step.** Click on `Settings`, then `Members`, then `New Project Member`. In the `People` box, search for and add the user ``bethard``. Under ``Project Access``, select ``Reporter``. Then click ``Add users``.
 
-3. You've successfully forked the repository and granted us access, but so far your repository only exists on `git.cis.uab.edu`. To be able to work on the project, you will need to clone it to your local machine. Click on the HTTPS button and observe the URL in the box that looks like `https://git.cis.uab.edu/.../agents-blackjack.git`. Run the following command, replacing `<url>` with the URL from the box:
+3. You've successfully forked the repository and granted your instructor access, but so far your repository only exists on `git.cis.uab.edu`. To be able to work on the project, you will need to clone it to your local machine. Click on the HTTPS button and observe the URL in the box that looks like `https://git.cis.uab.edu/.../agents-blackjack.git`. Run the following command, replacing `<url>` with the URL from the box:
 
         git clone <url>
 
@@ -58,17 +58,20 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 1. If you look closely at the test failures, you will see that the problem is that `edu.uab.cis.agents.blackjack.DealerAgent.act` is throwing a `java.lang.UnsupportedOperationException`.
 
-2. Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. Your agent should implement the following rules:
+2. Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. **Do not modify any other classes.** Your agent should implement the following rules:
 
-   * If the total points represented by the cards are 17 or more, it should return `Action.STAND`. Otherwise, it should return `Action.HIT`.
-   * The numeric cards count for the equivalent number of points (TWO=2, THREE=3, ..., TEN=10).
-   * JACK, QUEEN and KING count for 10 points.
-   * ACE counts for 11 points unless that would put the total points over 21. In that case, ACE counts for 1 point. (Note that if you have more than one ACE, they can count for different points, e.g. one can count as 11 and one can count as 1.)  
+   * If the total points represented by the cards are 17 or more, `act` should return `Action.STAND`. Otherwise, it should return `Action.HIT`.
+   * Even if the total points represents 22 or more (which traditionally would be a "bust") you should return `Action.STAND`.
+   * In calculating the total points, the order of the cards does not matter, only the point values.
+   * The numeric cards always count for the equivalent number of points (TWO=2, THREE=3, ..., TEN=10).
+   * JACK, QUEEN and KING always count for 10 points.
+   * Each ACE may count for either 11 points or 1 point. You should pick between these by aiming for the highest possible points without exceeding 21. That is, if counting an ACE as 11 points would cause your total points to be 22 or more, you should count that ACE as 1 point.
 
 ## Test your code
 
 1.  Re-run the tests:
 
+        mvn clean
         mvn test
 
     You should now see a message like:
@@ -77,7 +80,7 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
         [INFO] BUILD SUCCESS
         [INFO] ------------------------------------------------------------------------
 
-    Your code is now passing the tests that were given to you. This is a good sign, but note that a successful `mvn test` does not guarantee you full credit on an assignment. We will run extra tests on your code when grading it. For example, the tests you have been given do not test your handling of ACE cards.
+    Your code is now passing the tests that were given to you. This is a good sign, but note that **a successful `mvn test` does not guarantee you full credit on an assignment**. We will run extra tests on your code when grading it. For example, the tests you have been given do not test your handling of ACE cards.
 
 ## Save your changes while you work
 
@@ -101,4 +104,4 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 1.  To submit your assignment, just make sure that you have pushed all of your changes to `git.cis.uab.edu`.
 
-2.  We will inspect the date of your last push to your `git.cis.uab.edu` repository. If it is after the deadline, your submission will be marked as late. So please **do not push changes to `git.cis.uab.edu` after the assignment deadline** unless you intend to submit a late assignment.
+2.  I will inspect the date of your last push to your `git.cis.uab.edu` repository. If it is after the deadline, your submission will be marked as late. So please **do not push changes to `git.cis.uab.edu` after the assignment deadline** unless you intend to submit a late assignment.
