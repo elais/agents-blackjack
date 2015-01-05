@@ -30,7 +30,7 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 1.  Compile the code. Run the following command:
 
-        mvn compile
+        mvn clean compile
 
     Everything should compile and you should see a message like:
 
@@ -40,7 +40,7 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 2.  Test the code. Run the following command:
 
-        mvn test
+        mvn clean test
 
     The tests should fail, and you should see a message like:
 
@@ -54,11 +54,13 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
         [INFO] BUILD FAILURE
         [INFO] ------------------------------------------------------------------------
 
+    Note the `clean`, which ensures that Maven alone (not your development environment) is compiling your code.
+
 ## Implement your part of the code
 
 1. If you look closely at the test failures, you will see that the problem is that `edu.uab.cis.agents.blackjack.DealerAgent.act` is throwing a `java.lang.UnsupportedOperationException`.
 
-2. Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. **Do not modify any other classes.** Your agent should implement the following rules:
+2. Your task is to correctly implement `edu.uab.cis.agents.blackjack.DealerAgent.act` by modifying `src/main/java/edu/uab/cis/agents/blackjack/DealerAgent.java`. **Do not modify any other files.** Your agent should implement the following rules:
 
    * If the total points represented by the cards are 17 or more, `act` should return `Action.STAND`. Otherwise, it should return `Action.HIT`.
    * Even if the total points represents 22 or more (which traditionally would be a "bust") you should return `Action.STAND`.
@@ -71,8 +73,7 @@ The goal of this assignment is to introduce you to intelligent agents, and at th
 
 1.  Re-run the tests:
 
-        mvn clean
-        mvn test
+        mvn clean test
 
     You should now see a message like:
 
